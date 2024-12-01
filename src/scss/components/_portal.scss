@@ -1,0 +1,114 @@
+@import url("https://use.typekit.net/bal4sbn.css");
+
+:root {
+    --color-primary: #1a73e8;
+    --color-secondary: #034732;
+    --color-accent: #fff9e5;
+    --font-fractul: "fractul-variable", sans-serif;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: var(--font-fractul) !important;
+    background: var(--color-primary);
+    font-variation-settings: "wght" 300;
+    position: relative;
+    z-index: 0;
+}
+
+.portal {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+  
+    .background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background: repeating-linear-gradient(
+            135deg,
+            rgba(255, 249, 229, 0.4) 0%,
+            rgba(255, 249, 229, 0.6) 10%,
+            rgba(26, 115, 232, 0.4) 20%,
+            rgba(3, 71, 50, 0.5) 30%
+        );
+        background-size: 400% 400%;
+        animation: sunlight-rays 40s linear infinite, shimmer 2s ease-in-out infinite alternate;
+        filter: blur(40px);
+    }
+  
+    .description-container {
+        position: relative;
+        bottom: 5%;
+        right: 5%;
+        color: var(--color-accent);
+        z-index: 2;
+        max-width: 80vw;  
+    }
+
+    .description {
+        color: #fff9e5;
+        max-width: fit-content;
+        text-align: left;
+        font-size: 2rem;
+        padding: 0rem;
+        margin: 0;
+        letter-spacing: 9px;
+        animation: shimmer 40s ease-in-out infinite alternate;
+        text-shadow: #034732 -1px -1px 1px;
+    }
+
+    p {
+        font-size: 1rem;
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .portal {
+        padding: 0 2rem;
+    }
+
+    .description-container {
+        font-size: 1rem;  // Adjust font size for readability
+        max-width: 85%;
+    }
+
+    .description {
+        font-size: 2rem; // Adjust font size for mobile
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+}
+
+@keyframes sunlight-rays {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        opacity: 0.8;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+}

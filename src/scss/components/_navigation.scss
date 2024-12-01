@@ -1,0 +1,63 @@
+/* src/components/Navigation.css */
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: rgba(26, 115, 232, 0.27); /* Semi-transparent background */
+    color: #fff;
+    backdrop-filter: blur(10px); /* Creates the blur effect on the background */
+    box-shadow: 0 0 20px 10px rgba(26, 115, 232, 0.2); /* Adds a soft glow/blur around the edges */
+    border-radius: 12px; /* Optional: makes the edges rounded */
+}
+
+  
+  .signature img {
+    margin: 0;
+    max-width: 150px; /* Adjust this value as needed */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 5rem;
+  }
+  
+  .nav-links li {
+    display: inline-block;
+  }
+  
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+  
+  .menu-icon {
+    display: none; /* Hide by default */
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none; /* Hide navigation links on small screens */
+      flex-direction: column;
+      gap: 10px;
+      text-align: center;
+    }
+  
+    .nav-links.active {
+        margin-top: 1rem;
+        text-align: right;
+        min-height: 20vw;
+        display: flex; /* Show links when the menu is open */
+    }
+  
+    .menu-icon {
+        display: block;
+        font-size: 2rem; /* Increase this value to make the icon bigger */
+        cursor: pointer;
+    }
+  }
+  
