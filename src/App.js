@@ -1,11 +1,11 @@
 import React from 'react';
 import { BrowserRouter, useRoutes } from 'react-router-dom';
 
-import Portal from './components/Portal';
+import Home from './components/Home/Home';
 import Navigation from './components/Navigation'; // Import your Navigation component
-import Portfolio from './components/Portfolio';
-import Apply from './components/Apply';
-import About from './components/About';
+import Portfolio from './components/Portfolio/Portfolio';
+import Inquire from './components/Inquire/Inquire';
+import About from './components/About/About';
 
 
 function App() {
@@ -13,19 +13,19 @@ function App() {
   const routesArray = [
     {
       path: "*",
-      element: <Portal />,
+      element: <Home />,
     },
     {
       path: "/Home",
-      element: <Portal />,
+      element: <Home />,
     },
     {
       path: "/Portfolio",
       element: <Portfolio />,
     },
     {
-      path: "/Apply",
-      element: <Apply />,
+      path: "/Inquire",
+      element: <Inquire />,
     },
     {
       path: "/About",

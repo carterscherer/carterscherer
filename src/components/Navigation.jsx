@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';  // For routing
 import { TiThMenu } from "react-icons/ti";
 import { TiThMenuOutline } from "react-icons/ti";
-import cslogo from '../assets/Beige_Signature.png'
+import cslogo from '../assets/Branding/Beige_Signature.png'
 import '../scss/components/_navigation.scss';  // You can create a CSS file for styling
 
 const Navigation = () => {
@@ -19,7 +19,7 @@ const Navigation = () => {
       <ul className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
         <li><Link to="/">Home</Link></li>
         <li><Link to="/portfolio">Portfolio</Link></li>
-        <li><Link to="/apply">Apply</Link></li>
+        <li><Link to="/inquire">Inquire</Link></li>
         <li><Link to="/about">About</Link></li>
       </ul>
       {/* Mobile Menu Toggle Icon */}

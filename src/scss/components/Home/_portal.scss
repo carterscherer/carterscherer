@@ -1,0 +1,155 @@
+@import url("https://use.typekit.net/bal4sbn.css");
+
+:root {
+    --color-primary: #0c4e90; /* Soft beige, daylight-inspired */
+    --color-secondary: #6f77a2; /* Muted lavender for balance */
+    --color-accent: #f0efe4; /* Full bright yellow for sun highlights */
+    --font-fractul: "fractul-variable", sans-serif;
+    --font-Poiret: "poiret-one", sans-serif;
+    --font-Futura: "futura-pt", sans-serif;
+
+
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: "futura-pt", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background: var(--color-primary);
+    position: relative;
+    z-index: 0;
+
+    /* Remove overflow:hidden here to allow scrolling on the page */
+    overflow: auto;  /* Or remove this line to default to scrolling */
+}
+
+
+.portal {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 80vh;
+    padding-bottom: 2rem;
+
+    .background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background: repeating-linear-gradient(
+            135deg,
+            var(--color-primary) 0%, /* Soft beige */
+            rgba(173, 216, 230, 0.4) 20%, /* Muted sky blue */
+            rgba(34, 93, 117, 0.5) 40%, /* Soft yellow glow */
+            rgba(10, 99, 167, 0.434) 60%, /* Warm golden */
+            rgba(140, 197, 220, 0.2) 80% /* Muted coral-beige */
+        );
+        background-size: 400% 400%;
+        animation: sunlight-rays 20s linear infinite, shimmer 5s ease-in-out infinite alternate;
+        filter: blur(20px); /* Softer blurring for a dreamy look */
+    }
+
+    .description-container {
+        text-align: center;
+        padding: 0 5%;
+        color: var(--color-secondary);
+        max-width: 90vw;
+        
+    }
+    
+    .description {
+        font-family: var(--font-JohnDoe), sans-serif;
+        color: var(--color-secondary);
+        font-size: 2.2rem;
+        line-height: 1.6;
+        font-weight: 400;
+        max-width: 65vw;
+        margin: auto;
+        padding: 2rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Shadow effect */
+
+        // background-color: rgba(240, 239, 228, 0.5); /* Soft beige transparency */
+        // backdrop-filter: blur(10px);
+        // border-radius: 1rem;
+        // box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
+
+        p {
+            margin: 0;
+        }
+    
+        .bold {
+            font-size: 4rem;
+            font-weight: 700; /* Strong emphasis for company name */
+            color: var(--color-accent); /* Bright yellow highlight */
+            
+        }
+    
+        .emphasis {
+            font-weight: 600;
+            font-size: 7rem;
+            color: #88a2c0; /* Soft muted lavender */
+        }
+    
+        .highlight {
+            font-weight: 500;
+            font-style: italic;
+            color: var(--color-accent);
+        }
+    
+        .dynamic {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: rgba(110, 119, 162, 0.8); /* Harmonized muted lavender */
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .description {
+        padding: 1rem;
+        p {
+            font-size: 2rem;
+        }
+        .bold {
+            font-size: 2rem !important;
+            font-weight: 700;
+        }
+        .highlight {
+            font-size: 2.2rem;
+        }
+        .emphasis {
+            font-size: 2rem !important;
+        }
+        .dynamic {
+            font-size: 2rem;
+        }
+    }
+}
+
+@keyframes sunlight-rays {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        opacity: 0.7;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+}

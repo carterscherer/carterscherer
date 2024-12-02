@@ -50,6 +50,10 @@
   }
   
   @media (max-width: 768px) {
+    .signature img {
+      margin-top: 0.6rem;
+      max-width: 7rem;
+    }
     .nav-links {
       display: none; /* Hide navigation links on small screens */
       flex-direction: column;
