@@ -2,7 +2,7 @@
 
     We are a technology design firm inventing on a new plane of innovative excellence.
 
-    https:/carterscherer.com || San Francsico, Ca
+    https://carterscherer.com || San Francsico, Ca
 
 ## From idea to fruition
 
@@ -10,7 +10,7 @@
 
 ### Our Services
 
-    Visit https://carterscherer.com/apply to fill out an application.
+    Visit https://carterscherer.com/inquire and let's get to work.
 
 
 

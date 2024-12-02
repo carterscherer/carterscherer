@@ -7,6 +7,7 @@ import Portfolio from './components/Portfolio/Portfolio';
 import Inquire from './components/Inquire/Inquire';
 import About from './components/About/About';
 
+import Footer from './components/Footer';
 
 function App() {
   // Define your routes configuration
@@ -40,9 +41,9 @@ function App() {
     <div>
       {/* Navigation bar stays on top */}
       <Navigation />
-      
       {/* Render the route components */}
       <div>{routesElement}</div>
+      <Footer />
     </div>
   );
 }

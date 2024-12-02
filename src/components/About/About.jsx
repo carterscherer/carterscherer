@@ -22,16 +22,16 @@ export default function About() {
         <span className='subtitle'> ETHOS </span>
         <p className="story">
           
-          About 2 months ago I finally made the move to San Francisco, CA and now I live at SF2 with the
+          About 2 months ago I finally made the move to San Francisco, CA and now I live at SF2 with The
           Residency. I've been an entrepreneur since day one and over the years I developed quite a bit of
           expierience with building new gadgets that solve real world problems. When I made the move to the Bay
           Area I of course needed to pull out all the stops and take on contracts to make rent. Well turns out that
           designers in hardware are not that easy to come by and I had people coming to me left and right.
           SF is a place where startups come to raise, build and thrive as passionate visionaries that change the world.
         </p>
-        <span className='subtitle'> PARTE </span>
+        <span className='subtitle'> PARTÉ </span>
         <p className="closing">
-          Design PARTÉs
+          I
         </p>
       </div>
     </div>
