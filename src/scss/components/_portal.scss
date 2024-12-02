@@ -1,10 +1,14 @@
 @import url("https://use.typekit.net/bal4sbn.css");
 
 :root {
-    --color-primary: #1a73e8;
-    --color-secondary: #034732;
-    --color-accent: #fff9e5;
+    --color-primary: #0c4e90; /* Soft beige, daylight-inspired */
+    --color-secondary: #6f77a2; /* Muted lavender for balance */
+    --color-accent: #f0efe4; /* Full bright yellow for sun highlights */
     --font-fractul: "fractul-variable", sans-serif;
+    --font-Poiret: "poiret-one", sans-serif;
+    --font-Futura: "futura-pt", sans-serif;
+
+
 }
 
 html, body {
@@ -13,9 +17,11 @@ html, body {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    font-family: var(--font-fractul) !important;
+    font-family: "futura-pt", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     background: var(--color-primary);
-    font-variation-settings: "wght" 300;
+    // font-variation-settings: "wght" 300;
     position: relative;
     z-index: 0;
 }
@@ -26,8 +32,9 @@ html, body {
     justify-content: center;
     align-items: center;
     width: 100vw;
-    height: 100vh;
-  
+    height: 80vh;
+    padding-bottom: 2rem;
+
     .background {
         position: absolute;
         top: 0;
@@ -37,59 +44,91 @@ html, body {
         z-index: -1;
         background: repeating-linear-gradient(
             135deg,
-            rgba(255, 249, 229, 0.4) 0%,
-            rgba(255, 249, 229, 0.6) 10%,
-            rgba(26, 115, 232, 0.4) 20%,
-            rgba(3, 71, 50, 0.5) 30%
+            var(--color-primary) 0%, /* Soft beige */
+            rgba(173, 216, 230, 0.4) 20%, /* Muted sky blue */
+            rgba(34, 93, 117, 0.5) 40%, /* Soft yellow glow */
+            rgba(10, 99, 167, 0.434) 60%, /* Warm golden */
+            rgba(140, 197, 220, 0.2) 80% /* Muted coral-beige */
         );
         background-size: 400% 400%;
-        animation: sunlight-rays 40s linear infinite, shimmer 2s ease-in-out infinite alternate;
-        filter: blur(40px);
+        animation: sunlight-rays 20s linear infinite, shimmer 5s ease-in-out infinite alternate;
+        filter: blur(20px); /* Softer blurring for a dreamy look */
     }
-  
+
     .description-container {
-        position: relative;
-        bottom: 5%;
-        right: 5%;
-        color: var(--color-accent);
-        z-index: 2;
-        max-width: 80vw;  
+        text-align: center;
+        padding: 0 5%;
+        color: var(--color-secondary);
+        max-width: 90vw;
+        
     }
-
+    
     .description {
-        color: #fff9e5;
-        max-width: fit-content;
-        text-align: left;
-        font-size: 2rem;
-        padding: 0rem;
-        margin: 0;
-        letter-spacing: 9px;
-        animation: shimmer 40s ease-in-out infinite alternate;
-        text-shadow: #034732 -1px -1px 1px;
-    }
+        font-family: var(--font-JohnDoe), sans-serif;
+        color: var(--color-secondary);
+        font-size: 2.2rem;
+        line-height: 1.6;
+        font-weight: 400;
+        max-width: 65vw;
+        margin: auto;
+        padding: 2rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Shadow effect */
 
-    p {
-        font-size: 1rem;
-        margin: 5px 0;
+        // background-color: rgba(240, 239, 228, 0.5); /* Soft beige transparency */
+        // backdrop-filter: blur(10px);
+        // border-radius: 1rem;
+        // box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
+
+        p {
+            margin: 0;
+        }
+    
+        .bold {
+            font-size: 4rem;
+            font-weight: 700; /* Strong emphasis for company name */
+            color: var(--color-accent); /* Bright yellow highlight */
+            
+        }
+    
+        .emphasis {
+            font-weight: 600;
+            font-size: 7rem;
+            color: #88a2c0; /* Soft muted lavender */
+        }
+    
+        .highlight {
+            font-weight: 500;
+            font-style: italic;
+            color: var(--color-accent);
+        }
+    
+        .dynamic {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: rgba(110, 119, 162, 0.8); /* Harmonized muted lavender */
+        }
     }
 }
 
 @media (max-width: 768px) {
-    .portal {
-        padding: 0 2rem;
-    }
-
-    .description-container {
-        font-size: 1rem;  // Adjust font size for readability
-        max-width: 85%;
-    }
-
     .description {
-        font-size: 2rem; // Adjust font size for mobile
-    }
-
-    p {
-        font-size: 0.9rem;
+        padding: 1rem;
+        p {
+            font-size: 2rem;
+        }
+        .bold {
+            font-size: 2rem !important;
+            font-weight: 700;
+        }
+        .highlight {
+            font-size: 2.2rem;
+        }
+        .emphasis {
+            font-size: 2rem !important;
+        }
+        .dynamic {
+            font-size: 2rem;
+        }
     }
 }
 
@@ -104,7 +143,7 @@ html, body {
 
 @keyframes shimmer {
     0% {
-        opacity: 0.8;
+        opacity: 0.7;
         transform: scale(1);
     }
     100% {

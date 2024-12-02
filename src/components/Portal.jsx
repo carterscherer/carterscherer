@@ -7,9 +7,13 @@ const Portal = () => {
       <div className="background"></div>
       <div className="description-container">
         <div className="description">
-          We are a technology design firm inventing on a new plane of innovative excellence.
+          <p>
+           I am now a <span className="bold">product design</span> FIRM. <span className="emphasis">Targeting Visionaries. </span> 
+            Our innovations are <span className="highlight">luxurious, </span>Functional, <span className="highlight">Invisiblist, </span> 
+            BASIC, <span className="dynamic">BRUTALIST, </span> & Minimal.
+          </p>
         </div>
-      </div>
+      </div> 
     </div>
   );
 };

@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';  // For routing
 import { TiThMenu } from "react-icons/ti";
 import { TiThMenuOutline } from "react-icons/ti";
-import cslogo from '../assets/LQWHITE_CARTER_SCHERER_SIGNATURE.png'
+import cslogo from '../assets/Beige_Signature.png'
 import '../scss/components/_navigation.scss';  // You can create a CSS file for styling
 
 const Navigation = () => {
