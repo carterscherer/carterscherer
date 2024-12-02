@@ -10,7 +10,9 @@ export default function Footer() {
       <div className="footer-container">
         {/* Logo Section */}
         <div className="footer-logo">
+        <Link to="/">
           <img src={ CS2logo } alt="Carter Scherer is a Product Designer based out of San Francisco, California" />
+        </Link>
         </div>
 
         {/* Social Media Links */}

@@ -1,3 +1,17 @@
-# https://www.robotstxt.org/robotstxt.html
+# Allow all search engines to crawl all pages
 User-agent: *
-Disallow:
+Disallow: /private/
+Disallow: /admin/
+Disallow: /login/
+
+# Block a specific user agent (e.g., a bot that is scraping your site)
+User-agent: BadBot
+Disallow: /
+
+# Allow Googlebot to crawl certain directories
+User-agent: Googlebot
+Allow: /important-directory/
+Disallow: /noindex-directory/
+
+# Sitemap location
+Sitemap: https://www.carterscherer.com/sitemap.xml

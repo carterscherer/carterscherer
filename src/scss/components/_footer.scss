@@ -1,4 +1,5 @@
 /* _footer.scss */
+
 .footer {
     position: relative;
     bottom: 0;
@@ -9,32 +10,66 @@
     justify-content: space-between;
     align-items: center;
     bottom: 0;
-    width: 100vw;
-  }
-  
-  .footer-container {
+    flex-wrap: wrap; /* Allow wrapping of items on small screens */
+}
+
+.footer-container {
     display: flex;
     justify-content: space-between;
-    width: 90vw;
+    max-width: 90vw;
     align-items: center;
-  }
-  
-  .footer-logo img {
+    width: 100%; /* Ensure it takes full width on mobile */
+    flex-wrap: wrap; /* Allow items to wrap in mobile view */
+}
+
+.footer-logo img {
     padding-left: 3rem;
     height: 3rem; /* Adjust based on your logo size */
-  }
-  
-  .footer-links {
+    width: auto; /* Ensure logo doesn't stretch */
+}
+
+.footer-links {
     display: flex;
     gap: 20px;
-  }
-  
-  .footer-links a {
+}
+
+.footer-links a {
     color: white;
     text-decoration: none;
-  }
-  
-  .footer-links a:hover {
-    color: #FFFF00; /* Example hover effect */
-  }
-  
+    font-size: 1rem; /* Make links a bit smaller for mobile */
+}
+
+.footer-links a:hover {
+    color: #0c4e90; /* Example hover effect */
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 19px; /* Reduce padding for smaller screens */
+        align-items: flex-start; /* Align items to the start */
+        overflow: hidden;
+    }
+
+    .footer-container {
+        flex-direction: row; /* Stack the logo and links vertically */
+        align-items: center; /* Align to the start */
+        width: 100%; /* Full width on small screens */
+    }
+
+    .footer-logo img {
+        padding-left: 0; /* Remove padding on mobile */
+        height: 2.9rem; /* Adjust logo size for mobile */
+        margin-top: 0.7rem; /* Add some space below logo */
+    }
+
+    .footer-links {
+        display: flex;
+        flex-direction: row; /* Stack links vertically */
+        gap: 10px; /* Reduce the gap between the links */
+        align-items: flex-start; /* Align links to the left */
+    }
+
+    .footer-links a {
+        font-size: 3.1rem; /* Adjust font size for mobile */
+    }
+}

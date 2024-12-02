@@ -14,7 +14,7 @@ const Navigation = () => {
   return (
     <nav className="navigation">
       <div className="signature">
-        <img src={ cslogo } alt="Carter Scherer Signature" />
+      <Link to="/"><img src={ cslogo } alt="Carter Scherer Signature" /></Link>
       </div>
       <ul className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
         <li><Link to="/">Home</Link></li>

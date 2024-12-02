@@ -6,6 +6,7 @@ import Navigation from './components/Navigation'; // Import your Navigation comp
 import Portfolio from './components/Portfolio/Portfolio';
 import Inquire from './components/Inquire/Inquire';
 import About from './components/About/About';
+import NotFound from './components/NotFound'; 
 
 import Footer from './components/Footer';
 
@@ -13,7 +14,7 @@ function App() {
   // Define your routes configuration
   const routesArray = [
     {
-      path: "*",
+      path: "/",
       element: <Home />,
     },
     {
@@ -31,6 +32,10 @@ function App() {
     {
       path: "/About",
       element: <About />,
+    },
+    {
+      path: "*",
+      element: <NotFound />, // Render the 404 page
     }
   ];
 
