@@ -1,0 +1,100 @@
+.about-container {
+    display: grid;  /* Use grid layout */
+    grid-template-columns: 1fr 1fr;  /* Two equal-width columns */
+    gap: 20px;  /* Space between the columns */
+    background-color: #f0efe4;
+    padding: 4rem;
+    margin: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .about-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    img {
+      width: 100%;
+      max-width: 100%; /* Ensure the image fills its container */
+      height: auto;
+      border-radius: 8px;
+      object-fit: cover;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  }
+  
+  .about-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 2rem;
+
+    .signature-and-subtitle {
+        display: flex;           /* Use flexbox to arrange the children horizontally */
+        align-items: center;     /* Vertically center the items */
+        gap: 15rem;               /* Adds space between the image and the text */
+      }
+
+    .signature {
+        width: 16rem;
+        object-fit: contain;
+
+    }
+    .emphasis-text {
+        font-size: 1.9em;
+    }
+    .subtitle {
+        color: #6f77a2;
+        font-size: 2em;
+        font-weight: bold;
+        letter-spacing: 0.5em;
+    }
+  
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #333;
+    }
+  
+    p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 20px;
+      color: #555;
+    }
+  
+    .intro {
+      font-size: 1.2rem;
+      font-weight: 500;
+      
+    }
+  
+    .story {
+      font-size: 1.4rem;
+      line-height: 2;
+    }
+  
+    .closing {
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: #333;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .about-container {
+      grid-template-columns: 1fr;  /* Stack in one column on smaller screens */
+      text-align: center;
+    }
+  
+    .about-image img {
+      width: 80%;
+      margin-bottom: 20px;
+    }
+  
+    .about-text {
+      width: 100%;
+    }
+  }
+  

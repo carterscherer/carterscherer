@@ -1,7 +1,8 @@
 import React from 'react'
+import Gallery from '../../components/Home/Gallery'
 
 export default function Portfolio() {
   return (
-    <div>Portfolio</div>
+    <div> <Gallery /> </div>
   )
 }
