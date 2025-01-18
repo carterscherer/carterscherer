@@ -2,7 +2,7 @@
 
     We are a technology design firm inventing on a new plane of innovative excellence.
 
-    https://carterscherer.com || San Francsico, Ca
+    https://carterscherer.com || San Francisco, Ca
 
 ## From idea to fruition
 
